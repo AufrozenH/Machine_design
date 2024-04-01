@@ -37,7 +37,7 @@
 "machine_design\heap_4.o"
 "machine_design\port.o"
 "machine_design\control.o"
---library_type=microlib --strict --scatter "Machine_design\Machine_design.sct"
+--strict --scatter "Machine_design\Machine_design.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "Machine_design.map" -o Machine_design\Machine_design.axf

@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -22,13 +22,13 @@
 
 /* USER CODE BEGIN 0 */
 #include <stdio.h>
-#ifndef __GNUC__		// Èç¹û²»Ê¹ÓÃARM CC V6±àÒëÆ÷
-#pragma import(__use_no_semihosting)  // ²»Ê¹ÓÃ°ëÖ÷»úº¯Êı
-struct __FILE{int handle;};	// ±ê×¼¿âĞèÒªµÄÖ§³Öº¯Êı
-void _sys_exit(int x) {x = x;}	// ±ÜÃâÊ¹ÓÃ°ëÖ÷»úÄ£Ê½
+#ifndef __GNUC__		// å¦‚æœä¸ä½¿ç”¨ARM CC V6ç¼–è¯‘ï¿½?
+#pragma import(__use_no_semihosting)  // ä¸ä½¿ç”¨åŠä¸»æœºå‡½æ•°
+struct __FILE{int handle;};	// æ ‡å‡†åº“éœ€è¦çš„æ”¯æŒå‡½æ•°
+void _sys_exit(int x) {x = x;}	// é¿å…ä½¿ç”¨åŠä¸»æœºæ¨¡ï¿½?
 #endif
 
-FILE __stdout; 			// ARM CC V6°æ±¾ĞèÒªÌí¼ÓÖ§³Ö
+FILE __stdout; 			// ARM CC V6ç‰ˆæœ¬ï¿½?è¦æ·»åŠ æ”¯ï¿½?
 int fputc(int ch, FILE *f) {
 	HAL_UART_Transmit(&huart1 , (uint8_t *)&ch, 1, 0xFFFF);
 	return(ch);

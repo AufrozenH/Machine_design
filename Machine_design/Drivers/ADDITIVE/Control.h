@@ -2,9 +2,6 @@
 #define __CONTROL_H__
 
 #include "stdint.h"
-
-#define CSD_R TIM_CHANNEL_2 //右传送带
-#define CSD_L TIM_CHANNEL_4 //左传送带
 //=====================================================常规函数区=====================================================
 typedef struct{
 	  float now_error;		//这次的差值
